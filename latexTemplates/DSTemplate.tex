@@ -1,0 +1,182 @@
+\documentclass[11pt,letterpaper, main]{moderncv}  % 
+\moderncvstyle{banking}
+\nopagenumbers{}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage[scale=0.92]{geometry}
+\usepackage[scaled]{helvet}
+
+
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand\labelitemi{\textbullet}
+% personal data
+\name{Rigved Manoj}{}
+\vspace{0.2 in}
+%\address{\textit{United States of America}}
+\newcommand{\mysection}[1]{\section{\large{#1}}}
+\renewcommand*{\namefont}{\fontsize{18}{14}\selectfont\bfseries}
+\renewcommand*{\addressfont}{\mdseries\slshape}
+\newcommand*{\customUniversity}[8][.25em]{
+  \ifx&#4&%
+  \else{
+  \begin{tabular}{@{}l}
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     { #5}
+  \end{tabular} \\
+  }\fi%
+   \ifx&#3&%
+  \else{
+  \begin{tabular}{@{}l}
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #2}
+  \end{tabular} \\
+  }\fi%
+  \ifx&#6&%
+  \else{
+  \begin{tabular}{@{}l}
+    {\small #6}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries \itshape #7}
+  \end{tabular} \\
+  }\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customexpentry}[7][.25em]{
+  \ifx&#4&%
+  \else{
+  \begin{tabular}{@{}l}
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {#5}
+  \end{tabular} \\
+  }\fi%
+  \begin{tabular}{@{}l} 
+    {\bfseries \itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+     \small  #7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+  
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{8pt}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\justifying
+\vspace{0mm}
+\makecvtitle
+\vspace*{-10mm}
+\begin{center}
+\begin{tabular}{ c c c c c}
+\faEnvelope\enspace \href{mailto:rmanoj@umass.edu}{rmanoj@umass.edu} &
+\faLinkedin\enspace \href{https://www.linkedin.com/in/rigvedmanoj/}{LinkedIn} &
+\faGithub\enspace \href{https://github.com/RigvedManoj}{Github} &
+\faUser\enspace \href{https://rigvedmanoj.github.io/}{Portfolio} &
+\faMobile\enspace \href{tel:413-829-8931}{413-829-8931} 
+\end{tabular}
+\end{center}
+\vspace*{-7mm}
+\mysection{EDUCATION} 
+\vspace*{-2mm}
+{\customUniversity{Expected Graduation: May 2025}{Master of Science in Computer Science}{University of Massachusetts, Amherst}{Amherst, USA}{\textbf{Courses:} Software Development, Network Security, Machine Learning, Formal Language Theory}{GPA 4.0/4.0}{}}
+\vspace{-4mm}
+{\customUniversity{Jul 2016 - Jun 2020}{Bachelor of Technology in Electronics with Minor in Computer Science}{National Institute of Technology, Tiruchirappalli}{Trichy, India}{\textbf{Courses:} Big Data, Operating Systems, Data Structures and Algorithms, Database Management}{}{}}
+\vspace{-9mm}
+\mysection{SKILLS}
+\vspace*{0mm}
+\begin{minipage}{\maincolumnwidth}%
+\small{
+\textbf{Languages and Tools:} Python, SQL, JavaScript, C++, Git, Django, React, Node JS, AWS, Kubernetes
+\vspace{1mm}\\
+\textbf{Expertise:} Full-Stack, Software Development, Software Architecture, Algorithms, Database Management, Agile, Jira 
+}
+\end{minipage}%
+\vspace*{-1.5mm}
+\mysection{EXPERIENCE}
+\vspace*{-2mm}
+{\customexpentry{ReplaceExperienceDate1}{ReplaceExperienceRole1}{\large{ReplaceExperienceCompany1}}{ReplaceExperienceLocation1}{}
+{\begin{itemize}[itemsep=1pt]
+   ReplaceExperienceItems1
+\end{itemize}}}
+{\customexpentry{ReplaceExperienceDate2}{ReplaceExperienceRole2}{\large{ReplaceExperienceCompany2}}{ReplaceExperienceLocation2}{}
+{\begin{itemize}[itemsep=1pt]
+   ReplaceExperienceItems2
+\end{itemize}}}
+{\customexpentry{ReplaceExperienceDate3}{ReplaceExperienceRole3}{\large{ReplaceExperienceCompany3}}{ReplaceExperienceLocation3}{}
+{\begin{itemize}[itemsep=1pt]
+   ReplaceExperienceItems3
+\end{itemize}}}
+\vspace*{-2.5mm}
+\mysection{PROJECTS}
+\vspace*{-2mm}
+{\customcvproject{ReplaceProjectRole1}
+{}
+{\begin{itemize}[itemsep=1pt]
+     ReplaceProjectItems1
+\end{itemize}}}
+{\customcvproject{ReplaceProjectRole2}
+{}
+{\begin{itemize}[itemsep=1pt]
+     ReplaceProjectItems2
+\end{itemize}}}
+{\customcvproject{ReplaceProjectRole3}
+{}
+{\begin{itemize}[itemsep=1pt]
+     ReplaceProjectItems3
+\end{itemize}}}
+{\customcvproject{ReplaceProjectRole4}
+{}
+{\begin{itemize}[itemsep=1pt]
+     ReplaceProjectItems4
+\end{itemize}}}
+\mysection{PUBLICATIONS}
+\vspace*{-3mm}
+{\customcvproject{ReplacePublicationRole1}
+{}
+{\begin{itemize}[itemsep=1pt]
+     ReplacePublicationItems1
+\end{itemize}}}
+\vspace{0.5mm}
+{\customcvproject{ReplacePublicationRole2}
+{}
+{\begin{itemize}[itemsep=1pt]
+     ReplacePublicationItems2
+\end{itemize}}}
+\vspace*{-2mm}
+\vspace{-6mm}
+\end{document}
+
