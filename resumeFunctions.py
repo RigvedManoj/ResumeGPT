@@ -1,5 +1,7 @@
 import os
 import re
+import sys
+
 import pandas as pd
 from aiFunctions import *
 
@@ -17,8 +19,22 @@ class Resume:
             self.date = date
 
 
+def get_resource_path(relative_path):
+    """ Get the absolute path to the resource, works for both development and for PyInstaller. """
+    # If running in a PyInstaller bundle, use _MEIPASS to find the resources
+    if getattr(sys, 'frozen', False):
+        # The application is frozen
+        base_path = sys._MEIPASS
+    else:
+        # The application is not frozen
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+
 def get_resume_points():
-    df = pd.read_csv('metadata/Resume.csv')
+    resume_path = get_resource_path('metadata/Resume.csv')
+    df = pd.read_csv(resume_path)
     columns_to_extract = ['id', 'description']
     resume_points = df[columns_to_extract].values.tolist()
     return resume_points
@@ -54,8 +70,8 @@ def get_new_resume_point(job_point, resume_point):
     """.format(job_point, resume_point)
     new_resume_point = generate_text(soft_prompt)
     [score, new_score] = compare_scores(job_point, resume_point, new_resume_point)
-    print("Old:", job_point, resume_point, score)
-    print("New:", job_point, new_resume_point, new_score)
+    # print("Old:", job_point, resume_point, score)
+    # print("New:", job_point, new_resume_point, new_score)
     return new_resume_point
 
 

@@ -1,0 +1,184 @@
+\documentclass[11pt,letterpaper, main]{moderncv}  % 
+\moderncvstyle{banking}
+\nopagenumbers{}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage[scale=0.92]{geometry}
+\usepackage[scaled]{helvet}
+
+
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand\labelitemi{\textbullet}
+% personal data
+\name{Rigved Manoj}{}
+\vspace{0.2 in}
+%\address{\textit{United States of America}}
+\newcommand{\mysection}[1]{\section{\large{#1}}}
+\renewcommand*{\namefont}{\fontsize{18}{14}\selectfont\bfseries}
+\renewcommand*{\addressfont}{\mdseries\slshape}
+\newcommand*{\customUniversity}[8][.25em]{
+  \ifx&#4&%
+  \else{
+  \begin{tabular}{@{}l}
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     { #5}
+  \end{tabular} \\
+  }\fi%
+   \ifx&#3&%
+  \else{
+  \begin{tabular}{@{}l}
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #2}
+  \end{tabular} \\
+  }\fi%
+  \ifx&#6&%
+  \else{
+  \begin{tabular}{@{}l}
+    {\small #6}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #7}
+  \end{tabular} \\
+  }\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customexpentry}[7][.25em]{
+  \ifx&#4&%
+  \else{
+  \begin{tabular}{@{}l}
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {#5}
+  \end{tabular} \\
+  }\fi%
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+     \small  #7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+  
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{8pt}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\justifying
+\vspace{0mm}
+\makecvtitle
+\vspace*{-15mm}
+\begin{center}
+\begin{tabular}{ c c c c c}
+\faEnvelope\enspace \href{mailto:rmanoj@umass.edu}{rmanoj@umass.edu} &
+\faLinkedin\enspace \href{https://www.linkedin.com/in/rigvedmanoj/}{LinkedIn} &
+\faGithub\enspace \href{https://github.com/RigvedManoj}{Github} &
+\faUser\enspace \href{https://rigvedmanoj.github.io/}{Portfolio} &
+\faMobile\enspace \href{tel:413-829-8931}{413-829-8931} 
+\end{tabular}
+\end{center}
+\vspace*{-8mm}
+\mysection{EDUCATION} 
+\vspace*{-2mm}
+{\customUniversity{Expected Graduation: May 2025}{Master of Science in Computer Science (Data Science Specialization)}{University of Massachusetts, Amherst}{Amherst, USA}{Courses: \textbf{Natural Language Processing, Machine Learning, Reinforcement Learning, Statistics}}{GPA 4.0/4.0}{}}
+\vspace{-5mm}
+{\customUniversity{Jul 2016 - Jun 2020}{Bachelor of Technology in Electronics with Minor in Computer Science}{National Institute of Technology, Tiruchirappalli}{Trichy, India}{Courses: \textbf{Pattern Recognition, Big Data, Data Structures and Algorithms, Database Management}}{}{}}
+\vspace{-10mm}
+\mysection{SKILLS}
+\vspace*{-1mm}
+\begin{minipage}{\maincolumnwidth}%
+\small{
+\textbf{Languages and Tools:} Python, C++, Java, Javascript, HTML, CSS, SQL, NumPy, Scikit-Learn, Git, Jenkins, Kubernetes
+\vspace{1mm}\\
+\textbf{Expertise:} Machine Learning, Large Language Models, Database Management, RAG, Computer Vision, Data Analysis
+}
+\end{minipage}%
+\vspace*{-2mm}
+\mysection{EXPERIENCE}
+\vspace*{-2mm}
+{\customexpentry{Jun 2024 - Aug 2024}{Changing Hands}{\large{Data Science Intern}}{New York, USA}{}
+{\begin{itemize}[itemsep=1pt]
+\item Finetuned a custom \textbf{BERT-based regression model} to predict fashion item prices using a \textbf{synthesized dataset} of over \textbf{1.26 million entries}, integrating both text and categorical features, achieving price predictions within \textbf{30\% of actual values}.
+\item Engineered a \textbf{feature extraction pipeline} from Amazon and Depop datasets, optimizing \textbf{categorical and text features} for model input, leading to a highly \textbf{structured dataset} and a refined model capable of handling diverse pricing ranges.
+\item Utilized a \textbf{custom loss function} to improve model convergence across multiple price scales, significantly \textbf{reducing prediction variance}, with the model evaluated to have a \textbf{standard deviation of 2\%} across predicted prices.
+\end{itemize}}}
+{\customexpentry{May 2019 - Jul 2019}{Visa Inc}{\large{Machine Learning Intern}}{Bangalore, India}{}
+{\begin{itemize}[itemsep=1pt]
+\item Created a \textbf{Python-based full-stack application} to forecast transaction patterns utilizing 
+\textbf{Meta's Prophet model} for \textbf{anomaly detection}, leading to an \textbf{18\% enhancement in accuracy} compared to the prior model.
+\item Designed a \textbf{hyperparameter tuning strategy} combining grid search and random search to enhance the precision and recall of the model by \textbf{over 15\%}.
+\end{itemize}}}
+{\customexpentry{Oct 2020 - Jul 2023}{Visa Inc}{\large{Data Engineer}}{Bangalore, India}{}
+{\begin{itemize}[itemsep=1pt]
+\item Handled \textbf{15 million} daily transactions by crafting a resilient data ingestion system leveraging \textbf{HDFS, Spark, and Python} for distributed processing, and used\textbf{ CI/CD pipelines} to automate testing and deployment, ensuring seamless integration.
+\item Reduced code redundancy by \textbf{43\%} and lowered resource utilization by \textbf{10\%} by building a high-performance \textbf{ETL tool using Python and Hive}, automating data extraction and transformation across applications.
+\item Implemented a scalable, configuration-driven tool in \textbf{Python} to \textbf{automate} data pipeline testing, resulting in a \textbf{32\% decrease in manual testing} workload through integrated parallel running.
+\end{itemize}}}
+\vspace*{-3mm}
+\mysection{PROJECTS}
+\vspace*{-2mm}
+{\customcvproject{ResumeAI \small{(Python, RAG, OpenAI, Latex, Cosine Similarity)}  \href{https://github.com/RigvedManoj/ResumeGPT}  {\scalebox{0.8}{\faLink}}}
+{}
+{\begin{itemize}[itemsep=1pt]
+     \item Built an \textbf{automated resume tailoring tool} using \textbf{OpenAI's API} using \textbf{RAG}, optimizing job application processes by matching resume points to job descriptions through \textbf{cosine similarity}, and generating PDF resumes without manual edits.
+\end{itemize}}}
+\vspace{0.5mm}
+{\customcvproject{ChuckleBot \small{(Gemma, Mistral, LoRA, Fine-tuning, DPO)} \href{https://github.com/RigvedManoj/Chuckle_Bot} {\scalebox{0.8}{\faLink}}}
+{}
+{\begin{itemize}[itemsep=0pt]
+    \item Crafted a joke generator model by \textbf{fine-tuning Gemma and Mistral} Model using \textbf{LoRA} and subsequently applying \textbf{Direct Preference Optimization (DPO)} on a dataset of 200k jokes to specialize in generating short witty jokes.
+\end{itemize}}}
+{\customcvproject{JobGPT \small{(Python, RAG, GPT3.5, PostgreSQL)} \href{https://github.com/RigvedManoj/JobGPT}  {\scalebox{0.8}{\faLink}}}
+{}
+{\begin{itemize}[itemsep=1pt]
+\item Created a job search engine utilizing \textbf{Retrieval Augmented Generation (RAG)} and \textbf{OpenAI's GPT API} to provide users with tailored job listings based on input criteria, while integrating \textbf{PostgreSQL} for efficient data management.
+\end{itemize}}}
+\vspace*{-3mm}
+\mysection{PUBLICATIONS}
+\vspace*{-2mm}
+{\customcvproject{AMD Detection with CNN \href{https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CIOys7IAAAAJ&citation_for_view=CIOys7IAAAAJ:zYLM7Y9cAGgC} {\scalebox{0.8}{\faLink}}}
+{Elsevier, 2021}
+{\begin{itemize}[itemsep=1pt]
+    \item Developed a \textbf{multiscale CNN} employing \textbf{random forest} to detect AMD exceeding \textbf{96\% accuracy across diverse datasets}.
+\end{itemize}}}
+\vspace{0.5mm}
+{\customcvproject{RPE Recognition in Retinal OCT \href{https://scholar.google.com/citations?view_op=view_citation&hl=en&user=CIOys7IAAAAJ&citation_for_view=CIOys7IAAAAJ:d1gkVwhDpl0C} {\scalebox{0.8}{\faLink}}}
+{Elsevier, 2021}
+{\begin{itemize}[itemsep=1pt]
+     \item Innovated a novel approach utilizing contrast enhancement and pixel grouping to extract RPE layer and baseline from retinal OCT images for AMD diagnosis, achieving a \textbf{96.66\% accuracy} on a \textbf{dataset of 2130 images}.
+\end{itemize}}}
+\vspace*{-4mm}
+\end{document}
+
